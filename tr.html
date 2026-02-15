@@ -8,154 +8,523 @@
   <meta name="description" content="Timebet yeni giriş adresi, güncel link, mobil giriş, kayıt ve bonus fırsatları. Timebet bahis sitesi kaçak iddaa adresi burada!"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #0a0a0e;
-      color: #e0e0e0;
-      min-height: 100vh;
-      line-height: 1.5;
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
     }
+    
+    :root {
+      --primary-orange: #ff6200;
+      --light-orange: #ff8c00;
+      --dark-bg: #0a0a0e;
+      --card-bg: #14141a;
+      --border-color: #1f1f28;
+      --text-light: #e0e0e0;
+      --text-gray: #a0a0a8;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-light);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Animated background gradient */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 20% 50%, rgba(255, 98, 0, 0.08) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255, 140, 0, 0.06) 0%, transparent 50%);
+      animation: bgShift 15s ease infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    @keyframes bgShift {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(-5%, -5%); }
+    }
+    
     .wrapper {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0 15px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
     }
+    
+    /* Header */
     header {
-      background: linear-gradient(to bottom, #1a1a20, #0f0f14);
-      padding: 30px 0 20px;
+      background: linear-gradient(180deg, rgba(26, 26, 32, 0.95) 0%, rgba(15, 15, 20, 0.9) 100%);
+      backdrop-filter: blur(10px);
+      padding: 40px 0 30px;
       text-align: center;
-      border-bottom: 3px solid #ff6200;
+      border-bottom: 2px solid rgba(255, 98, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      animation: slideDown 0.6s ease-out;
     }
+    
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .logo-container {
+      animation: fadeIn 0.8s ease-out 0.2s both;
+    }
+    
     .logo-img {
-      max-width: 320px; /* Logo boyutunu burdan ayarla, istersen büyüt/küçült */
+      max-width: 280px;
       height: auto;
-      margin-bottom: 10px;
-      filter: drop-shadow(0 4px 12px rgba(255,98,0,0.5));
+      margin-bottom: 12px;
+      filter: drop-shadow(0 8px 24px rgba(255, 98, 0, 0.4));
+      transition: transform 0.3s ease;
     }
+    
+    .logo-img:hover {
+      transform: scale(1.05);
+    }
+    
     .slogan {
-      font-size: 1.4rem;
-      color: #ff8c00;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
       font-weight: 600;
-      margin-top: 5px;
+      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--light-orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-top: 8px;
+      letter-spacing: -0.3px;
     }
+    
+    /* Main CTA Button */
     .banner-area {
-      margin: 40px 0;
+      margin: 60px 0;
       text-align: center;
+      animation: fadeIn 1s ease-out 0.4s both;
     }
+    
     .big-btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
       width: 100%;
-      max-width: 620px;
-      background: linear-gradient(135deg, #ff6200, #ff8c00, #ff6200);
+      max-width: 600px;
+      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--light-orange) 50%, var(--primary-orange) 100%);
       background-size: 200% auto;
       color: white;
-      font-size: 2.1rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
       font-weight: 800;
-      padding: 28px 40px;
-      border-radius: 15px;
+      padding: 24px 48px;
+      border-radius: 16px;
       text-decoration: none;
-      box-shadow: 0 12px 35px rgba(255,98,0,0.45);
-      transition: all 0.4s;
-      border: 3px solid #ff8c00;
-      animation: shine 3s infinite linear;
+      box-shadow: 0 16px 48px rgba(255, 98, 0, 0.35),
+                  0 0 0 1px rgba(255, 140, 0, 0.5) inset;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
+    
+    .big-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s;
+    }
+    
+    .big-btn:hover::before {
+      left: 100%;
+    }
+    
     .big-btn:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(255,98,0,0.65);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 64px rgba(255, 98, 0, 0.5),
+                  0 0 0 1px rgba(255, 140, 0, 0.8) inset;
       background-position: right center;
     }
-    @keyframes shine {
-      to { background-position: -200% center; }
+    
+    .big-btn:active {
+      transform: translateY(-2px);
     }
+    
+    .btn-icon {
+      font-size: 2rem;
+      animation: arrowBounce 2s ease-in-out infinite;
+    }
+    
+    @keyframes arrowBounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(8px); }
+    }
+    
+    /* Content Section */
     .content {
-      margin: 40px 0;
-      font-size: 1.15rem;
+      margin: 60px 0;
+      animation: fadeIn 1s ease-out 0.6s both;
     }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .content-card {
+      background: rgba(20, 20, 26, 0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .content-card:hover {
+      border-color: rgba(255, 98, 0, 0.3);
+      box-shadow: 0 12px 48px rgba(255, 98, 0, 0.15);
+      transform: translateY(-2px);
+    }
+    
     h2 {
-      color: #ff8c00;
-      font-size: 2.2rem;
-      margin: 35px 0 15px;
-      text-align: center;
-    }
-    .highlight {
-      color: #ff6200;
+      font-family: 'Poppins', sans-serif;
+      color: var(--light-orange);
+      font-size: 2rem;
       font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+      letter-spacing: -0.5px;
+      position: relative;
+      display: inline-block;
+      width: 100%;
     }
-    .list {
-      list-style: none;
-      padding: 0 20px;
-      max-width: 800px;
-      margin: 0 auto 30px;
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary-orange), transparent);
+      border-radius: 2px;
     }
-    .list li {
-      margin: 12px 0;
-      padding-left: 30px;
+    
+    .intro-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .highlight {
+      color: var(--primary-orange);
+      font-weight: 700;
       position: relative;
     }
-    .list li:before {
-      content: "→";
-      color: #ff8c00;
-      position: absolute;
-      left: 0;
-      font-weight: bold;
+    
+    /* Feature List */
+    .list {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 30px auto;
+      display: grid;
+      gap: 16px;
     }
+    
+    .list li {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 24px;
+      background: rgba(255, 98, 0, 0.05);
+      border-left: 3px solid var(--primary-orange);
+      border-radius: 12px;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      animation: slideInLeft 0.6s ease-out both;
+    }
+    
+    .list li:nth-child(1) { animation-delay: 0.1s; }
+    .list li:nth-child(2) { animation-delay: 0.2s; }
+    .list li:nth-child(3) { animation-delay: 0.3s; }
+    .list li:nth-child(4) { animation-delay: 0.4s; }
+    .list li:nth-child(5) { animation-delay: 0.5s; }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .list li:hover {
+      background: rgba(255, 98, 0, 0.1);
+      transform: translateX(8px);
+    }
+    
+    .list li::before {
+      content: "→";
+      color: var(--light-orange);
+      font-weight: bold;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    
+    /* Call to Action Section */
+    .cta-section {
+      text-align: center;
+      padding: 50px 30px;
+      background: linear-gradient(135deg, rgba(255, 98, 0, 0.1) 0%, rgba(255, 140, 0, 0.05) 100%);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 98, 0, 0.2);
+      margin: 40px 0;
+      animation: fadeIn 1s ease-out 0.8s both;
+    }
+    
+    .cta-text {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--text-light);
+    }
+    
+    .click-anywhere {
+      display: inline-block;
+      padding: 12px 28px;
+      background: rgba(255, 98, 0, 0.15);
+      border: 2px solid var(--primary-orange);
+      border-radius: 50px;
+      font-size: 0.95rem;
+      color: var(--light-orange);
+      font-weight: 600;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 98, 0, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 15px rgba(255, 98, 0, 0);
+      }
+    }
+    
+    /* Footer */
     footer {
       text-align: center;
-      padding: 25px 0;
-      color: #555;
-      font-size: 0.95rem;
-      border-top: 1px solid #222;
+      padding: 40px 0;
+      color: var(--text-gray);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 60px;
     }
-    @media (max-width: 640px) {
-      .logo-img { max-width: 260px; }
-      .big-btn { font-size: 1.7rem; padding: 22px 30px; }
-      h2 { font-size: 1.9rem; }
+    
+    footer::before {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary-orange), transparent);
+      margin: 0 auto 20px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .wrapper {
+        padding: 0 16px;
+      }
+      
+      header {
+        padding: 30px 0 20px;
+      }
+      
+      .logo-img {
+        max-width: 220px;
+      }
+      
+      .slogan {
+        font-size: 0.95rem;
+      }
+      
+      .banner-area {
+        margin: 40px 0;
+      }
+      
+      .big-btn {
+        font-size: 1.4rem;
+        padding: 20px 32px;
+        max-width: 100%;
+      }
+      
+      .btn-icon {
+        font-size: 1.6rem;
+      }
+      
+      .content-card {
+        padding: 28px 20px;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      .intro-text {
+        font-size: 1rem;
+      }
+      
+      .list li {
+        padding: 14px 18px;
+        font-size: 0.95rem;
+      }
+      
+      .cta-section {
+        padding: 35px 20px;
+      }
+      
+      .cta-text {
+        font-size: 1.1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo-img {
+        max-width: 180px;
+      }
+      
+      .slogan {
+        font-size: 0.85rem;
+      }
+      
+      .big-btn {
+        font-size: 1.2rem;
+        padding: 18px 24px;
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      h2 {
+        font-size: 1.4rem;
+      }
+      
+      .list li {
+        font-size: 0.9rem;
+      }
+    }
+    
+    /* Accessibility & Performance */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    
+    /* Cursor Enhancement */
+    #redirectAll {
+      cursor: pointer;
+    }
+    
+    .big-btn {
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-  <div id="redirectAll" style="cursor:pointer; min-height:100vh;">
+  <div id="redirectAll" style="min-height:100vh;">
   
     <header>
       <div class="wrapper">
-        <img src="https://tr.timebetresmi-girisyap.com/Timebet-logo.png" alt="Timebet Logo" class="logo-img">
-        <div class="slogan">Timebet Giriş - Güncel Adres | Hoş Geldin Bonusları Seni Bekliyor!</div>
+        <div class="logo-container">
+          <img src="images/TimebetIcon.webp" alt="Timebet Logo" class="logo-img">
+          <div class="slogan">Timebet Giriş - Güncel Adres | Hoş Geldin Bonusları Seni Bekliyor!</div>
+        </div>
       </div>
     </header>
 
     <div class="wrapper">
       <div class="banner-area">
         <a href="https://xn--823tmebet-j5a.com/tr" class="big-btn" id="mainBtn">
-          SİTEYE HEMEN GİT → GÜNCEL GİRİŞ
+          <span>Siteye Hemen Git</span>
+          <span class="btn-icon">→</span>
         </a>
       </div>
 
       <div class="content">
-        <h2>Timebet Bahis Sitesi</h2>
-        <p>Timebet <span class="highlight">turuncu</span> tasarımıyla yıllardır en güvenilir bahis ve casino platformlarından biri. Yüksek oranlar, hızlı ödeme, canlı bahis ve slotlarda en iyi deneyim burada!</p>
+        <div class="content-card">
+          <h2>Timebet Bahis Sitesi</h2>
+          <p class="intro-text">
+            Timebet <span class="highlight">turuncu</span> tasarımıyla yıllardır en güvenilir bahis ve casino platformlarından biri. 
+            Yüksek oranlar, hızlı ödeme, canlı bahis ve slotlarda en iyi deneyim burada!
+          </p>
+        </div>
 
-        <h2>Neden Timebet?</h2>
-        <ul class="list">
-          <li>Mobil ve masaüstü <span class="highlight">sorunsuz giriş</span></li>
-          <li>Yeni üyelere özel <span class="highlight">3250 TL</span> hoş geldin bonusu</li>
-          <li>Canlı destek 7/24 Türkçe</li>
-          <li>Papara, banka havale, crypto ile <span class="highlight">anında yatırım</span></li>
-          <li>Bedava maç izleme + canlı casino keyfi</li>
-        </ul>
+        <div class="content-card">
+          <h2>Neden Timebet?</h2>
+          <ul class="list">
+            <li>Mobil ve masaüstü <span class="highlight">sorunsuz giriş</span></li>
+            <li>Yeni üyelere özel <span class="highlight">3250 TL</span> hoş geldin bonusu</li>
+            <li>Canlı destek 7/24 Türkçe</li>
+            <li>Papara, banka havale, crypto ile <span class="highlight">anında yatırım</span></li>
+            <li>Bedava maç izleme + canlı casino keyfi</li>
+          </ul>
+        </div>
 
-        <h2>Hemen Başla!</h2>
-        <p style="text-align:center; font-size:1.3rem; margin:30px 0;">
-          Sayfanın <span class="highlight">herhangi bir yerine</span> tıklayarak güncel Timebet adresine ulaşabilirsin!
-        </p>
+        <div class="cta-section">
+          <p class="cta-text">🎰 Hemen Başla!</p>
+          <div class="click-anywhere">
+            Sayfanın herhangi bir yerine tıklayarak güncel adrese ulaş
+          </div>
+        </div>
       </div>
     </div>
 
     <footer>
-      Timebet Güncel Giriş © 2026 - Tüm hakları saklıdır.
+      <div class="wrapper">
+        Timebet Güncel Giriş © 2026 - Tüm hakları saklıdır.
+      </div>
     </footer>
 
   </div>
@@ -163,17 +532,20 @@
   <script>
     const url = "https://xn--823tmebet-j5a.com/tr";
     const trigger = document.getElementById('redirectAll');
+    const mainBtn = document.getElementById('mainBtn');
 
+    // Tüm sayfa tıklanabilir
     trigger.addEventListener('click', () => {
       window.location.href = url;
     });
 
-    document.getElementById('mainBtn').addEventListener('click', (e) => {
+    // Ana buton için özel event (bubble'ı durdur)
+    mainBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       window.location.href = url;
     });
 
-    // İsteğe bağlı otomatik yönlendirme: 4 sn sonra
+    // İsteğe bağlı otomatik yönlendirme
     // setTimeout(() => { window.location.href = url; }, 4000);
   </script>
 
